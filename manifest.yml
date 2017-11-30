@@ -3,7 +3,7 @@ applications:
 - name: github-webhook
   services:
     - github-rabbitmq
-    - github-eureka
+    - service-registry
   env:
-    SPRING_PROFILES_ACTIVE: cloud
-    DEBUG: "true"
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+    TRUST_CERTS: api.run.pivotal.io

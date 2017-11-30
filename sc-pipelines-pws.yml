@@ -10,7 +10,7 @@ test:
       type: broker
       broker: cloudamqp
       plan: lemur
-    - name: github-eureka
+    - name: service-registry
       type: app
       coordinates: com.example.eureka:github-eureka:0.0.1.M1
       pathToManifest: sc-pipelines/manifest-eureka.yml
@@ -21,7 +21,7 @@ stage:
       type: broker
       broker: cloudamqp
       plan: lemur
-    - name: github-eureka
-      type: app
-      coordinates: com.example.eureka:github-eureka:0.0.1.M1
-      pathToManifest: sc-pipelines/manifest-eureka.yml
+    - name: service-registry
+      type: broker
+      broker: p-service-registry
+      plan: standard
